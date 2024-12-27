@@ -13,6 +13,6 @@ typedef struct unitt
     
 }unitt;
 
-unitt *orgnz(int *content);
+unitt *mv_to_struct(unitt *old, int *content);
 
 #endif
