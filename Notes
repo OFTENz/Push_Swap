@@ -1,0 +1,29 @@
+
+        Warnings :
+
+        - what if the integer Overflows ! 
+        - what if the array of characters contains a alphabet ! 
+
+
+
+        Planing : 
+
+        - Its better to create the funcitons (sa sb .........) will make it  easier to  track the moves ! 
+
+        - Look in the libft for functions to help set the  content to the variable of the struct : NUM! 
+
+        - Due to the functions Structure in the libft Project u have to create the array of integers seperatedly 
+
+
+
+
+        Steps : 
+
+        1- create the array of integers in  the heap !         DONE !
+
+        2- convert the characters from the array av to Integers and line them in array of the integers in the heap !            DONE !
+
+        3- create a struct that contains integer pointer and the struct pointer for the struct before it !  DONE !
+
+        4- Modify the " ft_lstnew " make the pointer for the before not the next ! DONE !
+
