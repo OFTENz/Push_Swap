@@ -6,7 +6,7 @@
 /*   By: sel-mir <sel-mir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 21:40:12 by sel-mir           #+#    #+#             */
-/*   Updated: 2024/12/28 23:35:50 by sel-mir          ###   ########.fr       */
+/*   Updated: 2024/12/29 00:12:58 by sel-mir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int	main(int ac, char *av[])
 		while (alpha)
 		{
 			printf("%d\n", *((*alpha).numb));
-			alpha = (*alpha).next;
+			alpha = (*alpha).next; 
 		}
 	}
 }

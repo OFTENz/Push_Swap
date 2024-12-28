@@ -44,7 +44,7 @@
         5- Put each address of the integer in the integer pointer in the struct !
 
         6- Link the struct with each others, Possibly u'll need to go in the other sense so u 'll need a variable
-            holding the struct before too !
+            holding the struct before too ! 
 
         5- create the methods functions Try not to forge the leaks ! 
 
