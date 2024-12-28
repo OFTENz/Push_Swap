@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   methods1.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sel-mir <sel-mir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/27 21:24:36 by sel-mir           #+#    #+#             */
-/*   Updated: 2024/12/28 22:09:00 by sel-mir          ###   ########.fr       */
+/*   Created: 2024/12/27 21:46:48 by sel-mir           #+#    #+#             */
+/*   Updated: 2024/12/27 23:12:23 by sel-mir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
+#include "push_swap.h"
 
-# define PUSH_SWAP_H
-
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h>
-
-typedef struct t_unitt
+t_unitt	*ft_lstnew(void *content)
 {
-	struct t_unitt	*next;
-	int				*numb;
+	t_unitt	*p;
 
-}	t_unitt;
-
-t_unitt	*ft_lstnew(void *content);
-int	**put_to_heap(char **stack_a, int ac);
-int	*ft_sidek(char *str);
-int	*ft_atoi(char *str, int	*p);
-
-#endif
+	p = malloc(sizeof(t_unitt));
+	if (!p)
+		return (NULL);
+	(*p).numb = content;
+	(*p).next = NULL;
+	return (p);
+}

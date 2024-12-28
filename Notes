@@ -4,6 +4,19 @@
         - what if the integer Overflows ! 
         - what if the array of characters contains a alphabet !
         - dont forget the leaks when moving the structs from stack to stack ! 
+        - Does the av take more than an integer number causing malloc overflow !
+        - what if the array is empty ! 
+
+
+
+
+
+        Cases :
+
+        - When the array contains the Alphabet the "ft_sidek" function return NULL then the pushswap returns NULL and the program
+
+        should return NULL !
+
 
 
 
@@ -22,18 +35,13 @@
 
         1- create the array of integers in  the heap !         DONE !
 
-        2- convert the characters from the array av to Integers and line them in array of the integers in the heap !            DONE !
+        2- convert the characters from the array av to Integers and line them in array of the integers in the heap !           DONE !
 
         3- create a struct that contains integer pointer and the struct pointer for the struct before it !  DONE !
 
         4- Modify the " ft_lstnew " make the pointer for the before not the next ! DONE !
 
-
-
-
-        STATUS :        Now we have the integers in the structs with the order they been inputed with ! 
-
-
+                STATUS :        Now we have the integers in the structs with the order they been inputed with ! 
 
         5- create the methods functions Try not to forge the leaks ! 
 
