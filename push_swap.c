@@ -6,7 +6,7 @@
 /*   By: sel-mir <sel-mir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 21:40:12 by sel-mir           #+#    #+#             */
-/*   Updated: 2024/12/28 23:31:12 by sel-mir          ###   ########.fr       */
+/*   Updated: 2024/12/28 23:35:50 by sel-mir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,18 @@ int	main(int ac, char *av[])
 	int	a;
 
 	a = 0;
-	alpha = push_swap(ac, av);
-	
-	if (!alpha)
-		return (printf("Naaahhh Hell Naahh ! "));
-		
-
-	while (alpha)
+	if (ac >= 2)
 	{
-		printf("%d\n", *((*alpha).numb));
-		alpha = (*alpha).next;
+		alpha = push_swap(ac, av);
+		
+		if (!alpha)
+			return (printf("Naaahhh Hell Naahh ! "));
+			
+
+		while (alpha)
+		{
+			printf("%d\n", *((*alpha).numb));
+			alpha = (*alpha).next;
+		}
 	}
 }
