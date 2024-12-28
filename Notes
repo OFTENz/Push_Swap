@@ -26,22 +26,25 @@
 
         - Look in the libft for functions to help set the  content to the variable of the struct : NUM! 
 
-        - Due to the functions Structure in the libft Project u have to create the array of integers seperatedly 
 
 
 
 
         Steps : 
 
-        1- create the array of integers in  the heap !         DONE !
+        1- create the array of integer pointers  in  the heap !         DONE !
 
-        2- convert the characters from the array av to Integers and line them in array of the integers in the heap !           DONE !
+        2- create an array of integer pointers          DONE !
 
-        3- create a struct that contains integer pointer and the struct pointer for the struct before it !  DONE !
+        3- Convert the the character numbers to an integers  and put them  in the heap then put there addresses
+            in the array of pointers !
 
-        4- Modify the " ft_lstnew " make the pointer for the before not the next ! DONE !
+        4- create a struct that contains integer pointer and the struct pointer for the next struct !  DONE !
 
-                STATUS :        Now we have the integers in the structs with the order they been inputed with ! 
+        5- Put each address of the integer in the integer pointer in the struct !
+
+        6- Link the struct with each others, Possibly u'll need to go in the other sense so u 'll need a variable
+            holding the struct before too !
 
         5- create the methods functions Try not to forge the leaks ! 
 
