@@ -6,7 +6,7 @@
 /*   By: sel-mir <sel-mir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 21:40:12 by sel-mir           #+#    #+#             */
-/*   Updated: 2024/12/29 00:12:58 by sel-mir          ###   ########.fr       */
+/*   Updated: 2024/12/29 00:58:49 by sel-mir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,12 @@ t_unitt	*push_swap(int ac, char **stack_a)
 	nums = put_to_heap(stack_a, ac);
 	if (!nums)
 		return (NULL);
-	rn = malloc(sizeof(t_unitt));
-	(*rn).numb = nums[i++];
+	rn = ft_lstnew(nums[i++]);
 	headd = rn;
 
-	while (i < (ac - 1))    
+	while (i < (ac - 1))
 	{
-		(*rn).next = ft_lstnew(nums[i++]);        
+		(*rn).next = ft_lstnew(nums[i++]);
 		rn = (*rn).next;
 	}
 	return (headd);
@@ -51,11 +50,12 @@ int	main(int ac, char *av[])
 		if (!alpha)
 			return (printf("Naaahhh Hell Naahh ! "));
 			
-
-		while (alpha)
-		{
-			printf("%d\n", *((*alpha).numb));
-			alpha = (*alpha).next; 
-		}
+	while (alpha)
+	{
+		printf("%d\n", *((*alpha).numb));
+		alpha = (*alpha).next;
+		if(!alpha)
+			return(printf("End is reached !"));
+	}
 	}
 }
