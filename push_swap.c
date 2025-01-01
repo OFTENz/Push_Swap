@@ -6,7 +6,7 @@
 /*   By: sel-mir <sel-mir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 21:40:12 by sel-mir           #+#    #+#             */
-/*   Updated: 2024/12/29 00:58:49 by sel-mir          ###   ########.fr       */
+/*   Updated: 2024/12/31 02:11:57 by sel-mir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,12 @@ t_unitt	*push_swap(int ac, char **stack_a)
 {
 	t_unitt	*rn;
 	t_unitt	*headd;
+	t_unitt	*headdb;
 	int		**nums;
 	int		i;
 
 	i = 0;
+	headdb = NULL;
 	nums = put_to_heap(stack_a, ac);
 	if (!nums)
 		return (NULL);
@@ -41,15 +43,22 @@ int	main(int ac, char *av[])
 {
 	t_unitt	*alpha;
 	int	a;
+	t_unitt	*bb;
+	int	*n;
 
+	n = malloc(sizeof(int));
+	*n = 0;
+	bb = ft_lstnew(n);
 	a = 0;
-	if (ac >= 2)
+	if (ac >= 2 && av[0])
 	{
 		alpha = push_swap(ac, av);
 		
 		if (!alpha)
 			return (printf("Naaahhh Hell Naahh ! "));
-			
+		alpha = NULL;
+		pa(&alpha, &bb);
+
 	while (alpha)
 	{
 		printf("%d\n", *((*alpha).numb));

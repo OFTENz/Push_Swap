@@ -6,6 +6,8 @@
         - dont forget the leaks when moving the structs from stack to stack ! 
         - Does the av take more than an integer number causing malloc overflow !
         - what if the array is empty ! 
+        - when failing free the array of pointers !
+        - Check for the arrya of integer is empty in the first move or it will cause problems !
 
 
 
@@ -32,7 +34,7 @@
 
         Steps : 
 
-        1- create the array of integer pointers  in  the heap !         DONE !
+        1- create the array of integer   in  the heap !         DONE !
 
         2- create an array of integer pointers          DONE !
 
@@ -46,7 +48,16 @@
         6- Link the struct with each others, Possibly u'll need to go in the other sense so u 'll need a variable
             holding the struct before too ! 
 
-        5- create the methods functions Try not to forge the leaks ! 
+        5- create the methods functions Try not to forget the leaks ! 
+
+
+
+
+
+
+        Methods :
+
+        1- ra : we Will need the first struct in the stack !
 
 
 
