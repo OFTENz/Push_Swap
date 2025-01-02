@@ -57,7 +57,9 @@
 
         Methods :
 
-        1- ra : we Will need the first struct in the stack !
+        ra : we made the last struct points to the first and modified the double pointer to point to the second struct !
+
+        
 
 
 

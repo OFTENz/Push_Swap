@@ -6,7 +6,7 @@
 /*   By: sel-mir <sel-mir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 21:40:12 by sel-mir           #+#    #+#             */
-/*   Updated: 2024/12/31 02:11:57 by sel-mir          ###   ########.fr       */
+/*   Updated: 2025/01/02 20:45:39 by sel-mir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 // mallocation of the struct and the fill of it's variable with the 
 
-t_unitt	*push_swap(int ac, char **stack_a)   
+t_unitt	*push_swap(int ac, char **stack_a, t_unitt **last, 	t_unitt	**alast)
 {
 	t_unitt	*rn;
 	t_unitt	*headd;
@@ -34,37 +34,43 @@ t_unitt	*push_swap(int ac, char **stack_a)
 	while (i < (ac - 1))
 	{
 		(*rn).next = ft_lstnew(nums[i++]);
+		if (i == ac - 2)
+			*alast = (*rn).next;
 		rn = (*rn).next;
 	}
+	*last = rn;
 	return (headd);
 }
 
 int	main(int ac, char *av[])
 {
 	t_unitt	*alpha;
+	t_unitt	**last;
+	t_unitt	**alast;
+	t_unitt	*l;
+	t_unitt	*ll;
 	int	a;
-	t_unitt	*bb;
-	int	*n;
 
-	n = malloc(sizeof(int));
-	*n = 0;
-	bb = ft_lstnew(n);
+	last = &l;
+	alast = &ll;
 	a = 0;
 	if (ac >= 2 && av[0])
 	{
-		alpha = push_swap(ac, av);
+		alpha = push_swap(ac, av, last, alast);
 		
+		rra(&alpha, last, *alast);
+
 		if (!alpha)
-			return (printf("Naaahhh Hell Naahh ! "));
-		alpha = NULL;
-		pa(&alpha, &bb);
+			(printf("Alpha is NULL  ! \n"));
 
 	while (alpha)
 	{
 		printf("%d\n", *((*alpha).numb));
 		alpha = (*alpha).next;
 		if(!alpha)
-			return(printf("End is reached !"));
+			(printf("End is reached !"));
 	}
+
+
 	}
 }
