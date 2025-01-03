@@ -6,7 +6,7 @@
 /*   By: sel-mir <sel-mir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 21:46:48 by sel-mir           #+#    #+#             */
-/*   Updated: 2025/01/03 05:13:28 by sel-mir          ###   ########.fr       */
+/*   Updated: 2025/01/03 22:51:43 by sel-mir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,12 +75,14 @@ void	pa(t_unitt **headd, t_unitt **headdb)
 	{
 		(*headd) = (*headdb);
 		(*(*headdb)).next = NULL;
+		(*(*headdb)).before = NULL;
 		return ;
 	}
 	b_next = (*(*headdb)).next;
 	if (b_next)
 		(*b_next).before = NULL;
 	(*(*headd)).before = (*headdb);
+	(*(*headdb)).before = NULL;
 	(*(*headdb)).next = (*headd);
 	(*headd) = (*headdb);
 	(*headdb) = b_next;
@@ -103,5 +105,6 @@ void	ra(t_unitt **headd, t_unitt **lst)
 	(*(*headd)).before = (*lst);
 	(*(*headd)).next = NULL;
 	(*(*lst)).next = (*headd);
+	(*lst) = (*headd);
 	(*headd) = head_next;
 }

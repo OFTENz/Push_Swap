@@ -6,7 +6,7 @@
 /*   By: sel-mir <sel-mir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 21:40:12 by sel-mir           #+#    #+#             */
-/*   Updated: 2025/01/03 22:08:51 by sel-mir          ###   ########.fr       */
+/*   Updated: 2025/01/03 22:48:29 by sel-mir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,23 +51,25 @@ int	main(int ac, char *av[])
 	t_unitt	*last;
 	t_unitt	*alast;
 	
-// 	t_unitt	*stackb;
-// 	t_unitt	*lastb;
-// 	t_unitt	*alastb;
-// 	t_unitt	*alphab;
-// 	int	*ntt;
-// 	int	*nt;
+
+	
+	t_unitt	*stackb;
+	t_unitt	*lastb;
+	t_unitt	*alastb;
+	t_unitt	*alphab;
+	int	*ntt;
+	int	*nt;
 // //////////////////////////////////////////////////////////////
 
-// 	nt = malloc(sizeof(int));
-// 	ntt = malloc(sizeof(int));
-// 	*nt = 1;
-// 	*ntt = 2;
-// 	stackb = ft_lstnew(nt);
-// 	alphab = stackb;
-// 	alastb = stackb;
-// 	(*stackb).next = ft_lstnew(ntt);
-// 	lastb = (*stackb).next;
+	nt = malloc(sizeof(int));
+	ntt = malloc(sizeof(int));
+	*nt = 1;
+	*ntt = 2;
+	stackb = ft_lstnew(nt);
+	alphab = stackb;
+	alastb = stackb;
+	(*stackb).next = ft_lstnew(ntt);
+	lastb = (*stackb).next;
 	
 	
 // //////////////////////////////////////////////////////////////
@@ -80,7 +82,12 @@ int	main(int ac, char *av[])
 		if (!alpha)
 			(printf("Alpha is NULL  ! \n"));
 
-		sa(&alpha);
+		ra(&alpha, &last);
+		while (last)
+		{
+			printf("\n%d", *((*last).numb));
+			last = (*last).before;
+		}
 		printf("\n ----------------\nNormal ->\n");
 		
 		while (alpha)
