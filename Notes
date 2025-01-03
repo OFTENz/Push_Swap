@@ -1,8 +1,9 @@
 
         Warnings :
 
+        - I didnt create the the same function  for a and also b u can call the same function but with the other variable of b ! 
         - what if the integer Overflows ! 
-        - what if the array of characters contains a alphabet !
+        - what if the array of characters contains a alphabet ! 
         - dont forget the leaks when moving the structs from stack to stack ! 
         - Does the av take more than an integer number causing malloc overflow !
         - what if the array is empty ! 
@@ -55,7 +56,7 @@
 
 
 
-        Methods :
+        Methods Exp :
 
         ra : we made the last struct points to the first and modified the double pointer to point to the second struct !
 
