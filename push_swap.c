@@ -6,7 +6,7 @@
 /*   By: sel-mir <sel-mir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 21:40:12 by sel-mir           #+#    #+#             */
-/*   Updated: 2025/01/03 22:48:29 by sel-mir          ###   ########.fr       */
+/*   Updated: 2025/01/04 06:56:17 by sel-mir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ int	main(int ac, char *av[])
 		if (!alpha)
 			(printf("Alpha is NULL  ! \n"));
 
-		ra(&alpha, &last);
+		rra(&alpha, &last, &alast);
 		while (last)
 		{
 			printf("\n%d", *((*last).numb));

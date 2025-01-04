@@ -6,7 +6,7 @@
 /*   By: sel-mir <sel-mir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 22:34:01 by sel-mir           #+#    #+#             */
-/*   Updated: 2025/01/03 00:16:45 by sel-mir          ###   ########.fr       */
+/*   Updated: 2025/01/04 06:56:40 by sel-mir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,27 @@ void	rr(t_unitt **headd, t_unitt **lasta, t_unitt **headdb, t_unitt **lastb)
 
 // also if the stack contained only one struct  no action !
 
-void	rra(t_unitt **headd, t_unitt **last, t_unitt	*alast)
+// i checked after adding the before variable !
+
+void	rra(t_unitt **headd, t_unitt **last, t_unitt	**aalast)
 {
+	t_unitt	*alast;
+
 	if (!(*headd) || !((*(*headd)).next))
 		return ;
+	alast = *aalast;
 	(*alast).next = NULL;
 	(*(*last)).next = (*headd);
+	(*(*last)).before = NULL;
+	(*(*headd)).before = (*last);
 	(*headd) = (*last);
+	(*last) = alast;
+	(*aalast) = (*(*last)).before;
 	
 	
 }
 
-void	rrr(t_unitt **headd, t_unitt **lasta, t_unitt	*alasta, t_unitt **headdb, t_unitt **lastb, t_unitt	*alastb)
+void	rrr(t_unitt **headd, t_unitt **lasta, t_unitt	**alasta, t_unitt **headdb, t_unitt **lastb, t_unitt	**alastb)
 {
 	rra(headd, lasta, alasta);
 	rra(headdb, lastb, alastb);

@@ -9,6 +9,7 @@
         - what if the array is empty ! 
         - when failing free the array of pointers !
         - Check for the arrya of integer is empty in the first move or it will cause problems !
+        - The reason why i added the before variable is in the rra we can set the one before the last to the null without a variable 
 
 
 
