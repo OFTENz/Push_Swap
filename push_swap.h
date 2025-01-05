@@ -6,7 +6,7 @@
 /*   By: sel-mir <sel-mir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 21:24:36 by sel-mir           #+#    #+#             */
-/*   Updated: 2025/01/04 06:50:03 by sel-mir          ###   ########.fr       */
+/*   Updated: 2025/01/05 00:34:15 by sel-mir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void	ra(t_unitt **headd, t_unitt **lst);
 void	rra(t_unitt **headd, t_unitt **last, t_unitt	**alast);
 void	rr(t_unitt **headd, t_unitt **lasta, t_unitt **headdb, t_unitt **lastb);
 void	rrr(t_unitt **headd, t_unitt **lasta, t_unitt	**alasta, t_unitt **headdb, t_unitt **lastb, t_unitt	**alastb);
+void	free_all(int **nums, t_unitt *headd, t_unitt *headdb);
 
 
 #endif

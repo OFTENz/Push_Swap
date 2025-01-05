@@ -6,7 +6,7 @@
 /*   By: sel-mir <sel-mir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 22:34:01 by sel-mir           #+#    #+#             */
-/*   Updated: 2025/01/04 06:56:40 by sel-mir          ###   ########.fr       */
+/*   Updated: 2025/01/05 00:11:16 by sel-mir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,18 +51,22 @@ void	rrr(t_unitt **headd, t_unitt **lasta, t_unitt	**alasta, t_unitt **headdb, t
 
 // this function freez the integers in the heap and their pointers ! 
 
-void	free_all(int **nums, int num, t_unitt *headd, t_unitt *headdb)
+void	free_all(int **nums, t_unitt *headd, t_unitt *headdb)
 {
-	int	a;
 	t_unitt	*hold;
-
+	int	a;
+	int	i;
+	
 	a = 0;
+	i = 0;
 	while (nums[a])
 		free(nums[a++]);
-	a = 0;
-	while (a < num - 1)
-		free(nums++);
-	
+	free(nums);
+
+
+	headd = NULL;
+	headdb = NULL;
+	hold = NULL;
 	if (headd)
 	{
 		while (headd)
