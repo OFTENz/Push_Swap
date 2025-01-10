@@ -6,7 +6,7 @@
 /*   By: sel-mir <sel-mir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 21:40:12 by sel-mir           #+#    #+#             */
-/*   Updated: 2025/01/05 01:37:38 by sel-mir          ###   ########.fr       */
+/*   Updated: 2025/01/10 17:31:51 by sel-mir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 // mallocation of the struct and the fill of it's variable with the 
 
-t_unitt	*push_swap(int ac, char **stack_a, t_unitt **last, t_unitt	**alast, int ***ss)
+t_unitt	*push_swap(int ac, char **av, t_unitt **last, t_unitt	**alast)
 {
 	t_unitt	*rn;
 	t_unitt	*headd;
@@ -26,8 +26,8 @@ t_unitt	*push_swap(int ac, char **stack_a, t_unitt **last, t_unitt	**alast, int 
 	i = 0;
 	
 	headdb = NULL;
-	*ss = put_to_heap(stack_a, ac);
-	nums = *ss;
+	nums = DO_it(av, ac);
+
 	if (!nums)
 		return (NULL);
 	rn = ft_lstnew(nums[i++]);
@@ -47,15 +47,24 @@ t_unitt	*push_swap(int ac, char **stack_a, t_unitt **last, t_unitt	**alast, int 
 	return (headd);
 }
 
+
+
+
+
 int	main(int ac, char *av[])
 {
+	int	a, i;
+
+	a = 0;
+	i = 0;
+	
+
+	
 	t_unitt	*alpha;
 	t_unitt	*last;
 	t_unitt	*alast;
 	t_unitt	*beta;
 	
-	int		**nums;
-	nums = NULL;
 
 	
 	t_unitt	*stackb;
@@ -78,16 +87,15 @@ int	main(int ac, char *av[])
 	
 	
 // //////////////////////////////////////////////////////////////
-	int	a;
 
 	a = 0;
 	if (ac >= 2 && av[0])
 	{
-		alpha = push_swap(ac, av, &last, &alast, &nums);
+		alpha = push_swap(ac, av, &last, &alast);
 		if (!alpha)
 			(printf("Alpha is NULL  ! \n"));
 
-		// rra(&alpha, &last, &alast);
+		rra(&alpha, &last, &alast);
 		beta = alpha;
 
 		while (last)

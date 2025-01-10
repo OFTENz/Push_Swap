@@ -6,7 +6,7 @@
 /*   By: sel-mir <sel-mir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 21:27:48 by sel-mir           #+#    #+#             */
-/*   Updated: 2024/12/28 23:13:14 by sel-mir          ###   ########.fr       */
+/*   Updated: 2025/01/09 13:32:23 by sel-mir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 // mallocation of the array of integer  pointers ! and filling with integer addresses 
 
-int	**put_to_heap(char **stack_a, int ac)
+int	** put_to_heap(char **stack_a, int ac)
 {
 	int	**nums;
 	int	i;
@@ -48,11 +48,6 @@ int	*ft_sidek(char *str)
 	if (!p)
 		return (NULL);
 	a = 0;
-	while (str[a])
-	{
-		if (!(str[a] <= '9' && str[a++] >= '0'))
-			return (printf(" there's an alphabet !"), NULL);
-	}
 	return (ft_atoi(str, p));
 }
 
@@ -85,3 +80,4 @@ int	*ft_atoi(char *str, int	*p)
 	}
 	return (*p = (res * sign), p);
 }
+
