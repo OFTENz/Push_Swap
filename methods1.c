@@ -6,7 +6,7 @@
 /*   By: sel-mir <sel-mir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 21:46:48 by sel-mir           #+#    #+#             */
-/*   Updated: 2025/01/03 22:51:43 by sel-mir          ###   ########.fr       */
+/*   Updated: 2025/01/11 13:25:13 by sel-mir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,8 @@ void	ss(t_unitt **headd, t_unitt **headdb)
 
 // also if the a was empty for some reason in swap !
 
-// i double checked for all the cases after adding the before variable || ONE STRUCT !
+// i double checked for all the cases after adding the before variable || 
+// ONE STRUCT !
 
 void	pa(t_unitt **headd, t_unitt **headdb)
 {

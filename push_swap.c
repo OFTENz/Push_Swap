@@ -6,7 +6,7 @@
 /*   By: sel-mir <sel-mir@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 21:40:12 by sel-mir           #+#    #+#             */
-/*   Updated: 2025/01/10 17:31:51 by sel-mir          ###   ########.fr       */
+/*   Updated: 2025/01/11 14:28:58 by sel-mir          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,17 @@ t_unitt	*push_swap(int ac, char **av, t_unitt **last, t_unitt	**alast)
 	t_unitt	*headd;
 	t_unitt	*before;
 	t_unitt	*headdb;
-	int **nums;
+	int		**nums;
 	int		i;
 
 	i = 0;
-	
 	headdb = NULL;
-	nums = DO_it(av, ac);
-
+	nums = do_it(av, ac);
 	if (!nums)
 		return (NULL);
 	rn = ft_lstnew(nums[i++]);
 	*alast = rn;
 	(*rn).before = NULL;
-
 	headd = rn;
 	while (i < (ac - 1))
 	{
@@ -46,10 +43,6 @@ t_unitt	*push_swap(int ac, char **av, t_unitt **last, t_unitt	**alast)
 	*alast = (*rn).before;
 	return (headd);
 }
-
-
-
-
 
 int	main(int ac, char *av[])
 {
@@ -74,7 +67,6 @@ int	main(int ac, char *av[])
 	int	*ntt;
 	int	*nt;
 // //////////////////////////////////////////////////////////////
-
 	nt = malloc(sizeof(int));
 	ntt = malloc(sizeof(int));
 	*nt = 1;
@@ -84,27 +76,21 @@ int	main(int ac, char *av[])
 	alastb = stackb;
 	(*stackb).next = ft_lstnew(ntt);
 	lastb = (*stackb).next;
-	
-	
 // //////////////////////////////////////////////////////////////
-
 	a = 0;
 	if (ac >= 2 && av[0])
 	{
 		alpha = push_swap(ac, av, &last, &alast);
 		if (!alpha)
 			(printf("Alpha is NULL  ! \n"));
-
-		rra(&alpha, &last, &alast);
+		rrr(NULL, NULL, NULL, &alpha, &last, &alast);
 		beta = alpha;
-
 		while (last)
 		{
 			printf("\n%d", *((*last).numb));
 			last = (*last).before;
 		}
 		printf("\n ----------------\nNormal ->\n");
-
 		while (alpha)
 		{
 			printf("\n%d", *((*alpha).numb));
@@ -112,6 +98,5 @@ int	main(int ac, char *av[])
 			if(!alpha)
 				(printf("\n Stack a Ended !\n"));
 		}
-		// free_all(nums, beta, alphab);
 	}
 }
