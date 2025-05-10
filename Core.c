@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   Core.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sel-mir <sel-mir@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sel-mir <-OFTEN@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/11 19:19:41 by sel-mir           #+#    #+#             */
 /*   Updated: 2025/03/15 06:01:12 by sel-mir          ###   ########.fr       */
